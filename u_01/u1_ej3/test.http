@@ -1,0 +1,3 @@
+###Probar primer ejemplo
+GET http://127.0.0.1:8000/models/alexnet
+Accept: application/json

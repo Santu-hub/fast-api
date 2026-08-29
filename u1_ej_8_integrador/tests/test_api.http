@@ -1,0 +1,93 @@
+###Prueba 1, post categoria.
+POST http://127.0.0.1:8000/categorias/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "codigo": "MAR-01",
+    "descripcion": "facultad",
+    "activo": true
+}
+
+###Prueba 2, get categoria.
+GET  http://127.0.0.1:8000/categorias/
+Accept: application/json
+
+###Prueba 3, get categoria por id (la creada en la Prueba 1, id=3 por los datos semilla).
+GET  http://127.0.0.1:8000/categorias/3
+Accept: application/json
+
+###Prueba 4, put categoria por id.
+PUT   http://127.0.0.1:8000/categorias/3
+Content-type: application/json
+
+{
+    "codigo": "DIE-02",
+    "descripcion": "trabajo",
+    "activo": true
+}
+
+###Prueba 5, put desactivado por id.
+PUT   http://127.0.0.1:8000/categorias/3/desactivar
+Content-type: application/json
+
+###Prueba 6, post producto.
+POST http://127.0.0.1:8000/productos/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Silla de Oficina",
+    "categoria": "MUE-01",
+    "precio": 150.50,
+    "stock": 20,
+    "stock_minimo": 5,
+    "activo": true
+}
+
+###Prueba 7, get productos.
+GET  http://127.0.0.1:8000/productos/
+Accept: application/json
+
+###Prueba 8, get producto por id.
+GET  http://127.0.0.1:8000/productos/1
+Accept: application/json
+
+###Prueba 9, put producto por id (bajamos el stock para forzar la alerta).
+PUT   http://127.0.0.1:8000/productos/1
+Content-type: application/json
+
+{
+    "nombre": "Silla de Oficina",
+    "categoria": "MUE-01",
+    "precio": 150.50,
+    "stock": 3,
+    "stock_minimo": 5,
+    "activo": true
+}
+
+###Prueba 10, get estado de stock (deberia dar bajo_stock_minimo: true).
+GET  http://127.0.0.1:8000/productos/1/stock
+Accept: application/json
+
+###Prueba 11, put desactivar producto por id.
+PUT   http://127.0.0.1:8000/productos/1/desactivar
+Content-type: application/json
+
+###Prueba 12, get producto inexistente (404).
+GET  http://127.0.0.1:8000/productos/99
+Accept: application/json
+
+###Prueba 13, post producto invalido (422 por precio negativo).
+POST http://127.0.0.1:8000/productos/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Escritorio Roto",
+    "categoria": "MUE-01",
+    "precio": -50.00,
+    "stock": 5,
+    "stock_minimo": 5,
+    "activo": true
+}

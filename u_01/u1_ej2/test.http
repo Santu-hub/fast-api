@@ -1,0 +1,7 @@
+###Probar primer ejemplo
+Get http://127.0.0.1:8000/items/22
+Accept: application/json
+
+###Probar segundo ejemplo
+GET http://127.0.0.1:8000/items/me
+Accept: application/json

@@ -1,0 +1,12 @@
+###1
+POST http://127.0.0.1:8000/users/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "carlos",
+    "email": "carlos@example.com",
+    "full_name": "Carlos Martinex",
+    "password": "Secreta123!"
+}
+

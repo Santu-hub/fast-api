@@ -1,0 +1,12 @@
+###Prueba 1
+POST http://127.0.0.1:8000/items/ 
+Content-type: application/json
+
+{
+    "name": "Portal Gun",
+    "price": 42.0
+}
+
+###Prueba 1
+GET http://127.0.0.1:8000/items/
+Accept: application/json

@@ -1,0 +1,34 @@
+POST http://127.0.0.1:8000/items/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Laptop",
+    "description": "Una computadora potente",
+    "price": 1200.50,
+    "tax": 120.00
+}
+
+###ejemplo 2
+PUT http://127.0.0.1:8000/items/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Laptop",
+    "description": "Una computadora potente",
+    "price": 1200.50,
+    "tax": 120.00
+}
+
+###ejemplo 3
+PUT http://127.0.0.1:8000/items/2?q=modo_debug
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Laptop",
+    "description": "Una computadora potente",
+    "price": 1200.50,
+    "tax": 120.00
+}

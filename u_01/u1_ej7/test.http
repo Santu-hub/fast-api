@@ -1,0 +1,11 @@
+###ejemplo 1
+GET http://127.0.0.1:8000/items
+Accept: application/json
+
+###ejemplo 2
+GET http://127.0.0.1:8000/items/?q=hola
+Accept: application/json
+
+###ejemplo 3
+GET http://127.0.0.1:8000/items/?q=ab
+Accept: application/json

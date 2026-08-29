@@ -1,0 +1,7 @@
+###1
+GET http://127.0.0.1:8000/items/foo
+Accept: application/json
+
+###1
+GET http://127.0.0.1:8000/items/nico
+Accept: application/json

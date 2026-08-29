@@ -1,0 +1,23 @@
+###Probar primer ejemplo
+GET http://127.0.0.1:8000/items/?skip=1&limit=1
+Accept: application/json
+
+###Probar segundo ejemplo
+GET http://127.0.0.1:8000/items/1?q=3
+Accept: application/json
+
+###Probar tercer ejemplo
+GET http://127.0.0.1:8000/items/1
+Accept: application/json
+
+###Probar cuarto ejemplo
+GET http://127.0.0.1:8000/users/7/items/abc?q=hola
+Accept: application/json
+
+###Probar quinto ejemplo
+GET http://127.0.0.1:8000/users/7/items/abc?short=true
+Accept: application/json
+
+###Probar sexto ejemplo
+GET http://127.0.0.1:8000/items1/1?needy=hola
+Accept: application/json
